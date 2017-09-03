@@ -24,13 +24,9 @@ export class AppComponent {
      } else {
        this.cpfduplicado = true;
      }
-<<<<<<< HEAD
  }
-}
-=======
-  }
-  onMove(): void {
-      this.cpfduplicado = false;
+ onMove(): void {
+  this.cpfduplicado = false;
   }
 }
->>>>>>> 53bea4a... mensagem, ao invés de alerta, para CPF já cadastrado
+  
