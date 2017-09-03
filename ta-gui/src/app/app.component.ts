@@ -15,14 +15,22 @@ export class AppComponent {
    aluno: Aluno = {nome: "", cpf: "", email: "", loginGit: ""};
    alunoService = new AlunoService();
    alunos: Aluno[] = [];
+   cpfduplicado: boolean = false;
 
    gravar(a: Aluno): void {
      if (this.alunoService.gravar(a)) {
        this.alunos.push(a);
        this.aluno = {nome: "", cpf: "", email: "", loginGit: ""};
      } else {
-       this.aluno.cpf = "";
-       alert("Já existe um aluno com esse CPF");
+       this.cpfduplicado = true;
      }
+<<<<<<< HEAD
  }
 }
+=======
+  }
+  onMove(): void {
+      this.cpfduplicado = false;
+  }
+}
+>>>>>>> 53bea4a... mensagem, ao invés de alerta, para CPF já cadastrado
