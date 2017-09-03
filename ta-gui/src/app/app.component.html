@@ -561,3 +561,12 @@
   <td><input [(ngModel)]= "aluno.loginGit"></td>
 </tr>
 </table>
+
+<ul>
+<li *ngFor="let a of alunos">
+    <span>{{a.nome}}</span>,
+    <span>{{a.cpf}}</span>,
+    <span>{{a.email}}</span>,
+    <span>{{a.loginGit}}</span>
+</li>
+</ul>

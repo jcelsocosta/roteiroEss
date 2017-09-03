@@ -13,18 +13,29 @@ import { AlunoService } from './aluno.service';
 export class AppComponent {
    title = 'ta-gui';
    aluno: Aluno = {nome: "", cpf: "", email: "", loginGit: ""};
+   alunoService = new AlunoService();
+   alunos: Aluno[] = [];
+   gravar(a: Aluno): void {
+    this.alunoService.gravar(a);
+    this.alunos.push(a);
+    this.aluno = {nome: "", cpf: "", email: "", loginGit: ""};
+ }
 }
-
+/**
 export class Aluno {
+  
   nome: string;
   cpf: string;
   email: string;
   loginGit: string;
    aluno: Aluno = {nome: "", cpf: "", email: "",loginGit: ""};
    alunoService = new AlunoService();
+   alunos: Aluno[] = [];
 
    gravar(a: Aluno): void {
      this.alunoService.gravar(a);
+     this.alunos.push(a);
      this.aluno = {nome: "", cpf: "", email: "", loginGit: ""};
   }
-}
+  
+}*/
