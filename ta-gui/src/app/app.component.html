@@ -1,5 +1,6 @@
 
 
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
@@ -536,9 +537,14 @@
 <router-outlet></router-outlet>
 
 <html (mousemove)="onMove()">
+
+<html>
+
+
 <h1>
   Teaching Assistant
 </h1>
+
 
 <h2>
   Alunos
@@ -568,22 +574,13 @@
 </tr>
 </table>
 
-<table class="alunos">
-<tr *ngIf="alunos.length > 0">
-   <th>Nome</th>
-   <th>CPF</th>
-   <th>e-mail</th>
-   <th>Requisitos</th>
-   <th>Gerência de Configuração</th>
-</tr>
-<tr *ngFor="let a of alunos">
-   <td>{{a.nome}}</td>
-   <td>{{a.cpf}}</td>
-   <td>{{a.email}}</td>
-   <td><input [(ngModel)]="a.metas['requisitos']" (change)="atualizarAluno(a)"></td>
-   <td><input [(ngModel)]="a.metas['gerDeConfiguracao']" (change)="atualizarAluno(a)"></td>
-</tr>
-</table>
+<nav>
+    <a routerLink="/alunos">Alunos</a>
+    <a routerLink="/metas">Metas</a>
+</nav>
+
+
+<router-outlet></router-outlet>
 
 
 </html>

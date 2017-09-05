@@ -24,14 +24,14 @@ export class AppComponent {
      } else {
        this.cpfduplicado = true;
      }
- }
-  onMove(): void {
-    this.cpfduplicado = false;
-    }   
-    
-   atualizarAluno(aluno: Aluno): void {
-      this.alunoService.atualizar(aluno);
-   }
 
+ } 
+    
+   onMove(): void {
+      this.cpfduplicado = false;
+   }
+   ngOnInit(): void{
+      this.alunos = this.alunoService.getAlunos();
+   }
 }
   
