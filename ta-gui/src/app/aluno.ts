@@ -23,6 +23,7 @@ export class Aluno {
     aluno.nome = this.nome;
     aluno.cpf = this.cpf;
     aluno.email = this.email;
+    aluno.loginGit = this.loginGit;
     aluno.metas = this.cloneMetas();
     return aluno;
   }
