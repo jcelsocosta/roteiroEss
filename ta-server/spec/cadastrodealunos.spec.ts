@@ -37,12 +37,14 @@ describe("O cadastro de alunos", () => {
 
     expect(cadastro.getAlunos().length).toBe(1);
   })
+
 it ("não aceita alunos sem CPF", () => {
   var aluno: Aluno = new Aluno();
   aluno.nome = "Celso";
   aluno.cpf = "";
   cadastro.cadastrar(aluno);
   expect(cadastro.getAlunos().length).toBe(0);
-  
+
   })
+  
 })
