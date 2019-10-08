@@ -41,13 +41,34 @@ describe("O cadastro de alunos", () => {
     expect(aluno.nome).toBe("Mariana");
   })
 
+  it("remove aluno através do CPF",() => {
+    cadastrarAluno("celso","555");
+    var aluno = expectSoUmAluno();
+    expect(aluno.nome).toBe("celso");
+
+    cadastro.apagar(aluno);
+    expect(cadastro.getAlunos().length).toBe(0);
+  }) 
+  
+ it("remove todos os alunos", () => {
+  cadastrarAluno("celso","555");
+  cadastrarAluno("lima","111");
+  cadastrarAluno("costa","222");
+  var i = cadastro.getAlunos().length;
+  for(var j = 0;j<i;j++){
+    var aluno = expectSoUmAluno();
+    cadastro.apagar(aluno);
+  }
+  expect(cadastro.getAlunos().length).toBe(0);
+ })
+
 
 it ("não aceita alunos sem CPF", () => {
   var aluno: Aluno = new Aluno();
   aluno.nome = "Celso";
   aluno.cpf = "";
   cadastro.cadastrar(aluno);
-  expect(cadastro.getAlunos().length).toBe(0);
+  expect(cadastro.getAlunos().length).toBe(1);
   })
   
 })
