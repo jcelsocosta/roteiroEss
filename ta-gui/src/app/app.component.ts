@@ -11,7 +11,6 @@ import { AlunoService } from './aluno.service';
 })
 
 export class AppComponent {
-<<<<<<< HEAD
    title = 'ta-gui';
    aluno: Aluno = {nome: "", cpf: "", email: "", loginGit: ""};
 }
@@ -21,13 +20,10 @@ export class Aluno {
   cpf: string;
   email: string;
   loginGit: string;
-=======
-   aluno: Aluno = {nome: "", cpf: "", email: ""};
+   aluno: Aluno = {nome: "", cpf: "", email: "",loginGit: ""};
    alunoService = new AlunoService();
 
    gravar(a: Aluno): void {
      this.alunoService.gravar(a);
-     this.aluno = {nome: "", cpf: "", email: ""};
+     this.aluno = {nome: "", cpf: "", email: "", loginGit: ""};
   }
->>>>>>> ab841e1... botao e funcionalidade do formulario para cadastro de alunos
-}
