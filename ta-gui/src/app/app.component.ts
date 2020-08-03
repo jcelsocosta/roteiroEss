@@ -27,3 +27,4 @@ export class Aluno {
      this.alunoService.gravar(a);
      this.aluno = {nome: "", cpf: "", email: "", loginGit: ""};
   }
+}
