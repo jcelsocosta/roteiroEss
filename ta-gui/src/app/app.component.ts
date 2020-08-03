@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-   title: 'ta-gui';
-   aluno: Aluno = {nome: "", cpf: "", email: ""};
+   title = 'ta-gui';
+   aluno: Aluno = {nome: "", cpf: "", email: "", loginGit: ""};
 }
 
 export class Aluno {
   nome: string;
   cpf: string;
   email: string;
+  loginGit: string;
 }
