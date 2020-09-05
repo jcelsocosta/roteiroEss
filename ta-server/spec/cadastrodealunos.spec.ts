@@ -42,7 +42,6 @@ it ("não aceita alunos sem CPF", () => {
   aluno.cpf = "";
   cadastro.cadastrar(aluno);
   expect(cadastro.getAlunos().length).toBe(0);
-
   })
   
 })
