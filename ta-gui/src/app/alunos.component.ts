@@ -34,7 +34,7 @@ import { AlunoService } from './aluno.service';
 
     onMove(): void {
        this.cpfduplicado = false;
-       this.loginDuplicado = false;
+      // this.loginDuplicado = false;
     }
 
     excluirAluno(a: Aluno): void {
