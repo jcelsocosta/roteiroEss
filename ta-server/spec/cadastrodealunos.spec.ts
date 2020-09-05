@@ -47,6 +47,5 @@ it ("não aceita alunos sem CPF", () => {
   
 })
 
-})
 
 
